@@ -1,0 +1,64 @@
+
+why Lambda Expression ?
+  1- Functional Programming Features
+  2- Code optimization
+
+Lambda Expression == anonymous object
+                        1- NameLess Function
+                        2- No Return Type , No Return Value
+                        3- No Access modifier
+
+Rules of writing Lambda Expression :
+   1- Remove Access modifier
+   2- Remove return type 
+   3- remove function name
+   4- you can remove () if the function has one argument
+   5- you can remove return word , but you Must remove {} with it.
+   6- you can remove {} if you have one statement in the function
+
+functional Interface : is the interface the have one Abstract method and can have many default and static methods
+		
+regular interface can have :
+    1) abstract methods
+    2) default methods  (After Java 7)
+    3) static methods  	(After Java 7)
+				
+ Examples of Functional interfaces
+     1- Runnable --> run()
+	 2- callable   --> call()
+	 3- comparable --> Compare()
+	 4- ActionListener --> ActionListener()
+	 
+------------------------------------------------------------------------------------------------------------------------
+
+Predefines functional interfaces  to invoke lambda Expression :
+		1- Predicate
+		2- function
+		3- Consumer
+		4- supplier
+
+------------------------------------------------------------------------------------------------------------------------
+
+(1) Predicate
+        1- only have one parameter --- return boolean
+        2- use it when you have conditional checks in your program.
+        3- Contain one abstract method called test().
+
+        interface predicate<T>{
+            public boolean test(T t);
+        }
+
+         Joining Predicates with (or,and) ... negate
+	
+------------------------------------------------------------------------------------------------------------------------
+
+(2) Function
+        1- only have one parameter of any type -- return any type.
+        2- use it when you need your lambda expression return a specific value.
+        3- Contain one abstract method called apply().
+
+            interface predicate<T,R>{
+                public anyType apply(T t);
+            }
+        Functional Chaining with andThen and Compose Methods.
+------------------------------------------------------------------------------------------------------------------------
