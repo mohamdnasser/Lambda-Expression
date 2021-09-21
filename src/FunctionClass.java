@@ -2,6 +2,7 @@ import java.util.function.Function;
 
 public class FunctionClass {
     public static void main(String args[]) {
+
         /*
         * Examole 1 :
         * Integer parameter and Integer return datatype
@@ -22,7 +23,6 @@ public class FunctionClass {
         System.out.println(f1.apply("Nasser"));   //6
         System.out.println(f1.apply("Omar"));     //4
 
-
         System.out.println("===========================================");
 
         /*
@@ -33,12 +33,5 @@ public class FunctionClass {
         Function<Integer,Integer> f4 = n -> (n * n * n);
         System.out.println(f3.andThen(f4).apply(2)); //4  //64    calculate f3 then f4
         System.out.println(f3.compose(f4).apply(2)); //8  //16    calculate f4 then f3
-
-
-
-
-
-
     }
-
 }
