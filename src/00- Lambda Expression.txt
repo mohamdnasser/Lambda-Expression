@@ -62,3 +62,21 @@ Predefines functional interfaces  to invoke lambda Expression :
             }
         Functional Chaining with andThen and Compose Methods.
 ------------------------------------------------------------------------------------------------------------------------
+(3) Consumer
+        1- take one parameter and doesn't return anything.
+        2- use it when you need your lambda expression taking parameter and doesn't return anything.
+        3- Contain one abstract method called accept().
+
+            interface Consumer<T,R>{
+                public anyType apply(T t);
+            }
+------------------------------------------------------------------------------------------------------------------------
+(4) Supplier
+        1- doesn't take one parameter but make operations
+        2- use it when you need your lambda expression not taking any parameter and need to do some operations.
+        3- Contain one abstract method called get().
+
+            interface Supplier<T,R>{
+                public anyType get(T t);
+            }
+------------------------------------------------------------------------------------------------------------------------
